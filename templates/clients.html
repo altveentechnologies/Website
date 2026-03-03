@@ -19,7 +19,7 @@
             {% for client in international_clients %}
             <article class="client-photo-card animate-on-scroll">
                 <div class="client-photo-wrap">
-                    <img src="{{ client.image }}" alt="{{ client.name }}" loading="lazy">
+                    <img src="{{ url_for('static', filename='images/' + client.image) }}" alt="{{ client.name }}" loading="lazy">
                     <div class="client-photo-overlay"></div>
                 </div>
                 <div class="client-photo-info">
@@ -46,7 +46,7 @@
             {% for client in local_clients %}
             <article class="client-photo-card animate-on-scroll">
                 <div class="client-photo-wrap">
-                    <img src="{{ client.image }}" alt="{{ client.name }}" loading="lazy">
+                    <img src="{{ url_for('static', filename='images/' + client.image) }}" alt="{{ client.name }}" loading="lazy">
                     <div class="client-photo-overlay"></div>
                 </div>
                 <div class="client-photo-info">
