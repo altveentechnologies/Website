@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<article class="blog-post-page">
+    <section class="section section-dark blog-post-hero">
+        <div class="container narrow">
+            <a href="{{ url_for('blogs') }}" class="back-link">&larr; All Blogs</a>
+            {% if post.image %}
+            <div class="blog-post-hero-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}" loading="eager">
+            </div>
+            {% endif %}
+            <span class="blog-post-category">{{ post.category }}</span>
+            <h1>{{ post.title }}</h1>
+            <p class="blog-post-meta">{{ post.author }} · {{ post.date }} · {{ post.read_time }}</p>
+        </div>
+    </section>
+
+    <section class="section blog-post-content-section">
+        <div class="container narrow">
+            <div class="blog-post-content">
+                {{ post.content | safe }}
+            </div>
+            <p><a href="{{ url_for('blogs') }}" class="btn btn-outline">Back to Blogs</a></p>
+        </div>
+    </section>
+
+    <section class="section section-dark section-newsletter">
+        <div class="container container-narrow text-center">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Get insights on software, marketing, and growth delivered to your inbox.</p>
+            {% if newsletter_success %}
+            <p class="newsletter-success-msg">Thanks for subscribing. We'll be in touch.</p>
+            {% else %}
+            {% if newsletter_error %}
+            <p class="newsletter-error-msg">Please enter a valid email address.</p>
+            {% endif %}
+            <form class="newsletter-form" action="{{ url_for('subscribe_newsletter') }}" method="post">
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <div class="newsletter-form-inner">
+                    <input type="email" name="email" placeholder="Your email" required aria-label="Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+            {% endif %}
+        </div>
+    </section>
+</article>
+{% endblock %}
