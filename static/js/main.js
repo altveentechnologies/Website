@@ -23,44 +23,7 @@
         });
     }
 
-    // Contact form handling (client-side validation + placeholder for backend)
-    var contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var name = document.getElementById('name');
-            var email = document.getElementById('email');
-            var message = document.getElementById('message');
-            var valid = true;
-            [name, email, message].forEach(function (field) {
-                if (!field || !field.value.trim()) {
-                    valid = false;
-                    field.setCustomValidity('This field is required.');
-                } else {
-                    field.setCustomValidity('');
-                }
-            });
-            if (!valid) {
-                contactForm.reportValidity();
-                return;
-            }
-            // For now: show success message. Replace with fetch() to your backend when ready.
-            var btn = contactForm.querySelector('button[type="submit"]');
-            var originalText = btn.textContent;
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-            setTimeout(function () {
-                btn.textContent = 'Message Sent!';
-                btn.classList.add('btn-success');
-                contactForm.reset();
-                setTimeout(function () {
-                    btn.textContent = originalText;
-                    btn.disabled = false;
-                    btn.classList.remove('btn-success');
-                }, 2500);
-            }, 600);
-        });
-    }
+    // Contact form submits normally to Flask (POST to /contact); no JS intercept.
 
     // Smooth scroll for anchor links (if any)
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
