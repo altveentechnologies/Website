@@ -27,6 +27,7 @@ export const SITE = {
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/team", label: "Team" },
   { href: "/services", label: "Services" },
   { href: "/clients", label: "Clients" },
   { href: "/blogs", label: "Blogs" },
@@ -276,6 +277,70 @@ export const VALUES: ValueItem[] = [
 
    Testimonials live in Supabase (table `testimonials`) and are managed from
    /admin/testimonials, see src/lib/testimonials.ts. */
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  department: "Leadership" | "Engineering" | "Design" | "Marketing" | "Operations";
+  bio: string;
+  image: string;
+  linkedin?: string;
+};
+
+/** Edit names, photos and bios here, or replace squad labels with individual members. */
+export const TEAM_INTRO =
+  "Engineers, designers, and marketers under one roof in Kashmir, working with clients across India and worldwide. You work directly with the people building and promoting your product.";
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    name: "Founding Team",
+    role: "Leadership & Strategy",
+    department: "Leadership",
+    bio: "B.Tech and Economics graduates who started Altveen to bring world-class software and digital marketing to businesses in Kashmir and beyond.",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85",
+  },
+  {
+    name: "Engineering Squad",
+    role: "Full-Stack Development",
+    department: "Engineering",
+    bio: "Web and mobile apps, Shopify / WordPress / Webflow builds, APIs, AI tools, and automation, shipped with clean architecture and clear documentation.",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=85",
+  },
+  {
+    name: "Design Studio",
+    role: "UI/UX & Brand Design",
+    department: "Design",
+    bio: "Brand identity, interface design, and creative assets that look premium and build trust across websites, apps, and campaigns.",
+    image:
+      "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=85",
+  },
+  {
+    name: "Growth Team",
+    role: "Digital Marketing",
+    department: "Marketing",
+    bio: "SEO, content, social media, and performance ads with transparent reporting, so you always know what is working and what to do next.",
+    image:
+      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=85",
+  },
+  {
+    name: "Client Success",
+    role: "Delivery & Support",
+    department: "Operations",
+    bio: "Your day-to-day contact for timelines, updates, and coordination, so projects stay on track from kickoff through launch and beyond.",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=85",
+  },
+];
+
+export const TEAM_DEPARTMENTS = [
+  "Leadership",
+  "Engineering",
+  "Design",
+  "Marketing",
+  "Operations",
+] as const;
 
 export const STATS = [
   { value: 150, suffix: "+", label: "Projects Completed" },

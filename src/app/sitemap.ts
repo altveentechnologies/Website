@@ -7,6 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const STATIC_ROUTES = [
   { path: "/", priority: 1 },
   { path: "/about", priority: 0.8 },
+  { path: "/team", priority: 0.7 },
   { path: "/services", priority: 0.9 },
   { path: "/clients", priority: 0.8 },
   { path: "/blogs", priority: 0.8 },
