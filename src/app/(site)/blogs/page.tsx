@@ -8,7 +8,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights on software, digital marketing, and growing your business, from the team at Altveen Technologies.",
+    "Software and digital marketing insights from Altveen Technologies, a leading agency in Kashmir serving clients in the USA, India, San Francisco, San Rafael, and worldwide.",
 };
 
 // Posts live in Supabase; revalidate hourly so publishing needs no redeploy.
@@ -22,7 +22,7 @@ export default async function BlogsPage() {
       <PageHero
         eyebrow="Blog"
         title="Insights worth your time"
-        description="On software, digital marketing, and growing your business."
+        description="Software, SEO, and digital marketing insights from Kashmir's agency for global clients."
       />
 
       <Section tone="raised">

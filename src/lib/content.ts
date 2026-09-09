@@ -12,7 +12,7 @@ export const SITE = {
   description:
     "We help businesses thrive with custom software solutions and data-driven digital marketing. From web apps, Shopify / WordPress / Webflow sites, and online stores to brand campaigns and design, we deliver results that matter.",
   shortDescription:
-    "Custom software and data-driven digital marketing, under one roof. Based in Kashmir, working with clients in India, the US and beyond.",
+    "Kashmir's trusted software development and digital marketing agency, working with clients across the globe, from San Francisco and San Rafael in the USA to businesses across India.",
   email: "altveentechnologies@gmail.com",
   phones: ["+91 77808 63457", "+91 78896 29640"],
   whatsapp: "917780863457",
