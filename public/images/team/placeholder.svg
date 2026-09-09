@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <rect width="400" height="500" fill="#141d25"/>
+  <circle cx="200" cy="175" r="64" stroke="#00c9a7" stroke-width="2" stroke-opacity="0.35"/>
+  <path d="M88 420c18-72 72-108 112-108s94 36 112 108" stroke="#00c9a7" stroke-width="2" stroke-opacity="0.35" stroke-linecap="round"/>
+  <text x="200" y="460" text-anchor="middle" fill="#93a7bb" font-family="system-ui,sans-serif" font-size="18">Photo coming soon</text>
+</svg>

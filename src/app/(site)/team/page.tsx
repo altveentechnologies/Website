@@ -101,7 +101,11 @@ export default function TeamPage() {
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {members.map((member, index) => (
-              <Reveal key={member.name} index={index} className="h-full">
+              <Reveal
+                key={`${member.department}-${member.name}-${member.role}`}
+                index={index}
+                className="h-full"
+              >
                 <TeamCard member={member} />
               </Reveal>
             ))}

@@ -281,56 +281,96 @@ export const VALUES: ValueItem[] = [
 export type TeamMember = {
   name: string;
   role: string;
-  department: "Leadership" | "Engineering" | "Design" | "Marketing" | "Operations";
+  department: "Leadership" | "Engineering" | "Design" | "Marketing";
   bio: string;
+  /** Replace with `/images/team/their-name.jpg` when photos are ready. */
   image: string;
   linkedin?: string;
 };
 
-/** Edit names, photos and bios here, or replace squad labels with individual members. */
+/** Swap each member's image path when you have real photos. */
+export const TEAM_PHOTO_PLACEHOLDER = "/images/team/placeholder.svg";
+
 export const TEAM_INTRO =
   "Engineers, designers, and marketers under one roof in Kashmir, working with clients across India and worldwide. You work directly with the people building and promoting your product.";
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Founding Team",
-    role: "Leadership & Strategy",
+    name: "Khalid Jan",
+    role: "Director & CEO",
     department: "Leadership",
-    bio: "B.Tech and Economics graduates who started Altveen to bring world-class software and digital marketing to businesses in Kashmir and beyond.",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=85",
+    bio: "Leads Altveen Technologies with a focus on software, digital marketing, and long-term client partnerships.",
+    image: "/images/team/khalid-jan.jpeg",
   },
   {
-    name: "Engineering Squad",
-    role: "Full-Stack Development",
+    name: "Sheikh Arfat",
+    role: "Leadership & Direction",
+    department: "Leadership",
+    bio: "Guides company strategy, client partnerships, and the direction behind every Altveen project.",
+    image: TEAM_PHOTO_PLACEHOLDER,
+  },
+  {
+    name: "Khalid Jan",
+    role: "Backend Engineer",
     department: "Engineering",
-    bio: "Web and mobile apps, Shopify / WordPress / Webflow builds, APIs, AI tools, and automation, shipped with clean architecture and clear documentation.",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=85",
+    bio: "Builds APIs, databases, and server-side systems that power reliable, scalable products.",
+    image: "/images/team/khalid-jan.jpeg",
   },
   {
-    name: "Design Studio",
-    role: "UI/UX & Brand Design",
+    name: "Syed Owais",
+    role: "Backend Engineer",
+    department: "Engineering",
+    bio: "Develops backend services, integrations, and infrastructure that keep applications fast and secure.",
+    image: "/images/team/syed-owais.jpeg",
+  },
+  {
+    name: "Umar Nazir",
+    role: "Frontend Engineer",
+    department: "Engineering",
+    bio: "Builds responsive, user-focused interfaces with clean code and sharp attention to detail.",
+    image: "/images/team/umar-nazir.jpeg",
+  },
+  {
+    name: "Ummar Farooq",
+    role: "Frontend Engineer",
+    department: "Engineering",
+    bio: "Crafts responsive interfaces and user experiences that feel polished across web and mobile.",
+    image: "/images/team/ummar-farooq.jpeg",
+  },
+  {
+    name: "Suhail Mohammed",
+    role: "Frontend Engineer",
+    department: "Engineering",
+    bio: "Turns designs into clean, performant front-end code with attention to detail and usability.",
+    image: "/images/team/suhail-mohammed.jpeg",
+  },
+  {
+    name: "Ummar Farooq",
+    role: "Design & Branding",
     department: "Design",
-    bio: "Brand identity, interface design, and creative assets that look premium and build trust across websites, apps, and campaigns.",
-    image:
-      "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=85",
+    bio: "Shapes brand identity, UI/UX, and visual design so every product looks clear, modern, and trustworthy.",
+    image: "/images/team/ummar-farooq.jpeg",
   },
   {
-    name: "Growth Team",
+    name: "Sheikh Arfat",
+    role: "Design & Branding",
+    department: "Design",
+    bio: "Shapes brand direction, visual identity, and design standards across client projects and Altveen itself.",
+    image: TEAM_PHOTO_PLACEHOLDER,
+  },
+  {
+    name: "Sheikh Arfat",
     role: "Digital Marketing",
     department: "Marketing",
-    bio: "SEO, content, social media, and performance ads with transparent reporting, so you always know what is working and what to do next.",
-    image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=85",
+    bio: "Leads growth strategy, campaigns, and marketing direction for client brands and Altveen itself.",
+    image: TEAM_PHOTO_PLACEHOLDER,
   },
   {
-    name: "Client Success",
-    role: "Delivery & Support",
-    department: "Operations",
-    bio: "Your day-to-day contact for timelines, updates, and coordination, so projects stay on track from kickoff through launch and beyond.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=85",
+    name: "Suhail Mohammed",
+    role: "Digital Marketing",
+    department: "Marketing",
+    bio: "Runs social, content, and campaign execution with a focus on reach, leads, and measurable results.",
+    image: "/images/team/suhail-mohammed.jpeg",
   },
 ];
 
@@ -339,7 +379,6 @@ export const TEAM_DEPARTMENTS = [
   "Engineering",
   "Design",
   "Marketing",
-  "Operations",
 ] as const;
 
 export const STATS = [
